@@ -1,0 +1,13 @@
+@import url(http://fonts.googleapis.com/css?family=Bacasime:200,400,700|PT++mono);
+
+:root{
+    --primary-color: lightslategray;
+    --secundary-color: lightcoral;
+    --tertiary-color: blue;
+}
+
+body{
+    background-color: var(--primary-color);
+    font-size: 12px;
+    font-family: Bacasime, sans-serif;
+}
