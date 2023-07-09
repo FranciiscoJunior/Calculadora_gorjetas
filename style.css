@@ -1,6 +1,6 @@
-@import url(http://fonts.googleapis.com/css?family=Bacasime:200,400,700|PT++mono);
+  @import url('https://fonts.googleapis.com/css2?family=Bacasime+Antique&display=swap');
 
-:root{
+  :root{
     --primary-color: lightslategray;
     --secundary-color: lightcoral;
     --tertiary-color: blue;
@@ -8,6 +8,14 @@
 
 body{
     background-color: var(--primary-color);
-    font-size: 12px;
-    font-family: Bacasime, sans-serif;
+    font-size: 15px;
+    font-family: 'Bacasime Antique', serif;
+}
+
+#container{
+    height: 380px;
+    width: 329px;
+    margin: 100px auto;
+    background: #1294e0;
+    box-shadow: 10px 10px 10px grey;
 }
