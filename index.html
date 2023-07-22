@@ -3,27 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <link rel="stylesheet" href="style.css">
-
     <title>Calculadora de gorjetas</title>
 </head>
 <body> 
     <div id="container">
     <div>
-        <h1>Calculadora De Gorjetas</h1>
+        <h1 class="title">Calculadora De Gorjetas</h1>
         <div>
-            <form>
+            <form class="tipsform">
                 <label for="bill">
                     <p><strong>Quanto ficou a conta?</strong></p>
                 </label>
                 <p>
-                    <strong>R$</strong><input type="number" placeholder="100" name="bill" id="bill">
+                    <strong>R$</strong><input type="number" placeholder="100" name="bill" id="bill" class="forminput">
                 </p>
                 <label for="ServiceQual">
                     <p><strong>Como foi o seu servico? </strong></p>
                     <p>
-                        <select name="ServiceQual" id="ServiceQual">
+                        <select name="ServiceQual" id="ServiceQual" class="formselect">
                             <option disabled selected value="0">-Escolha uma opcao-</option>
                             <option>30% - Otimo</option>
                             <option>20% - bom</option>
@@ -39,9 +37,9 @@
                         </label>
                     </p>
                     <p>
-                        <input type="number" placeholder="1" name="people" id="people"> <strong>Pessoas</strong>
+                        <input type="number" placeholder="1" name="people" id="people" class="forminput"> <strong>Pessoa(s)</strong>
                     </p>
-                    <center><button type="submit">Calcular!</button></center>
+                    <button type="submit" class="formsubmit">Calcular!</button>
                 </label> 
             </form>
         </div>
