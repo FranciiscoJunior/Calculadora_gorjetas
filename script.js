@@ -1,21 +1,25 @@
 function calculateTip(event){
     event.preventDefault();
 
-    let bill = document.getElementById('bill').value;
-    let serviceQual= document.getElementById('serviceQual').value;
-    let num0fPeople = document.getElementById('people').value;
+    let bill = Number(document.getElementById('bill').value);
+    let serviceQual= Number(document.getElementById('ServiceQual').value);
+    let num0fPeople = Number(document.getElementById('people').value);
 
-    if(bill == '' || serviceQual == 0){
+    console.log({bill, serviceQual, num0fPeople});
+
+    if(bill == null || serviceQual == 0){
         alert("por favor, preencha os valores")
         return;
     }
-    if(num0fPeople == '' || serviceQual == 0){
+    if(num0fPeople == null || num0fPeople == 1 || serviceQual == 0){
         num0fPeople = 1;
         document.getElementById('each').style.display = 'none';
     } else{
         document.getElementById('each').style.display = 'block';
     }
-    let total = (bill*serviceQual)/num0fPeople;
+    let total = parseFloat(bill + (bill*serviceQual/100)/num0fPeople);
+    let foreach = total / num0fPeople;
+    
     total = total.toFixed(2);
     document.getElementById('tip').innerHTML = total;
     document.getElementById('totaltip').style.display = 'block';
@@ -24,4 +28,4 @@ function calculateTip(event){
 document.getElementById('totaltip') .style.display = "none";
 document.getElementById('each') .style.display = "none";
 
-document.getElementById('tipforms').addEventListener('submit', calculateTip);
+document.getElementById('tipsform').addEventListener('submit', calculateTip);
