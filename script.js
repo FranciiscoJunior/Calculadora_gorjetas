@@ -17,8 +17,8 @@ function calculateTip(event){
     } else{
         document.getElementById('each').style.display = 'block';
     }
-    let total = parseFloat(bill + (bill*serviceQual/100)/num0fPeople);
-    let foreach = total / num0fPeople;
+    let total = parseFloat(bill + (bill*serviceQual/100));
+    let foreach = parseFloat(total / num0fPeople);
     
     total = total.toFixed(2);
     document.getElementById('tip').innerHTML = total;
